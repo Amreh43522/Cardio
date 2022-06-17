@@ -53,9 +53,9 @@ def calc_bmi_class(row):
 @app.post('/predict')
 def predict_cardio(data:Cardio):
     data = data.dict()
-    gender=data['gender']
-    height=data['height']
-    weight=data['weight']
+    gender1-fand2-m=data['gender']
+    heightincm=data['height']
+    weightincm=data['weight']
     systolic=data['systolic']
     diastolic=data['diastolic']
     age=data['age']
@@ -67,7 +67,7 @@ def predict_cardio(data:Cardio):
     bmi_class=calc_bmi_class(bmi)
     cholesterol=data['cholesterol']
     glucose_lvl=data['glucose_lvl']
-    smoke=data['smoke']
+    smoke0-non1-smoker=data['smoke']
     active=data['active']
    # print(classifier.predict([[variance,skewness,curtosis,entropy]]))
     prediction = clf.predict([[gender, height, weight, systolic, diastolic, age, age_bin, bmi_class, cholesterol,glucose_lvl,smoke,active]])
